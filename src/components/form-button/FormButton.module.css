@@ -1,0 +1,181 @@
+:root {
+    --color-primary: #4B7A8A;
+    --color-primary-dark: #245866;
+    --color-primary-surface: #F5F9F9;
+
+    --color-common-white: #FFFFFF;
+    --color-common--black: #1A1A1A;
+
+    --color-grey-200: #EEEEEE;
+    --color-grey-300: #DDDDDD;
+    --color-grey-400: #B9B9B9;
+    --color-grey-500: #909090;
+}
+
+.button {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.button--small {
+    gap: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.button--medium {
+    gap: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.button--icon-only.button--small {
+    padding: 4px;
+}
+
+.button--icon-only.button--medium {
+    padding: 8px;
+}
+
+.button--outlined {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.button--primary-contained {
+    background: var(--color-primary);
+    color: var(--color-common-white);
+}
+
+.button--primary-contained .button__icon path {
+    stroke: var(--color-common-white);
+    fill: var(--color-common-white);
+}
+
+.button--primary-contained:hover,
+.primary-contained:focus {
+    background: var(--color-primary-dark);
+}
+
+.button--primary-contained:disabled {
+    background: var(--color-grey-200);
+    color: var(--color-grey-500);
+}
+
+.button--primary-contained:disabled .button__icon path {
+    stroke: var(--color-grey-500);
+    fill: var(--color-grey-500);
+}
+
+.button--primary-outlined {
+    background: var(--color-common-white);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.button--primary-outlined .button__icon path {
+    stroke: var(--color-primary);
+    fill: var(--color-primary);
+}
+
+.button--primary-outlined:hover,
+.button--primary-outlined:focus {
+    background: var(--color-primary-surface);
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.button--primary-outlined:hover .button__icon path {
+    stroke: var(--color-primary-dark);
+    fill: var(--color-primary-dark);
+}
+
+.button--primary-outlined:focus .button__icon path {
+    stroke: var(--color-primary-dark);
+    fill: var(--color-primary-dark);
+}
+
+.button--primary-outlined:disabled {
+    color: var(--color-grey-500);
+    border-color: var(--color-grey-300);
+}
+
+.button--primary-outlined:disabled .button__icon path {
+    stroke: var(--color-grey-500);
+    fill: var(--color-grey-500);
+}
+
+.button--secondary-contained {
+    background-color: var(--color-grey-200);
+    color: var(--color-common--black);
+}
+
+.button--secondary-contained .button__icon path {
+    stroke: var(--color-common--black);
+    fill: var(--color-common--black);
+}
+
+
+.button--secondary-contained:hover,
+.button--secondary-contained:focus {
+    background-color: var(--color-grey-300);
+}
+
+.button--secondary-contained:disabled {
+    color: var(--color-grey-500);
+}
+
+.button--secondary-contained:disabled .button__icon path {
+    stroke: var(--color-grey-500);
+    fill: var(--color-grey-500);
+}
+
+.button--secondary-outlined {
+    background: var(--color-common-white);
+    color: var(--color-common--black);
+    border-color: var(--color-grey-400);
+}
+
+.button--secondary-outlined .button__icon path {
+    stroke: var(--color-common--black);
+    fill: var(--color-common--black);
+}
+
+.button--secondary-outlined:hover,
+.button--secondary-outlined:focus {
+    border-color: var(--color-grey-500);
+}
+
+.button--secondary-outlined:disabled {
+    color: var(--color-grey-500);
+    border-color: var(--color-grey-300);
+}
+
+.button--secondary-outlined:disabled .button__icon path {
+    stroke: var(--color-grey-500);
+    fill: var(--color-grey-500);
+}
+
+.button__icon {
+    width: 16px;
+    height: 16px;
+}
+
+.button__icon svg {
+    width: 9px;
+    height: 9px;
+}
+
+.button__icon--left {
+    order: 0
+}
+
+.button__icon--right {
+    order: 1
+}

@@ -1,0 +1,28 @@
+.inputNumber__group-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputNumber__group-container button {
+    position: absolute;
+    z-index: 1;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+}
+
+.inputNumber__group-container button:first-of-type {
+    left: 4px;
+}
+
+.inputNumber__group-container button:last-of-type {
+    right: 4px;
+}
+
+.inputNumber__group-container input {
+    flex: 1;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
