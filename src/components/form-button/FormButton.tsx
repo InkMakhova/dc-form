@@ -11,7 +11,7 @@ function FormButton(props: FormButtonProps): JSX.Element {
     iconPosition,
     text,
     ariaLabel,
-    onClick,
+    onPress,
     disabled,
     slot
   } = props;
@@ -22,21 +22,21 @@ function FormButton(props: FormButtonProps): JSX.Element {
   return (
     <Button
       className={`
-        ${styles.button}
+        ${styles['button']}
         ${styles[`button--${size}`]}
         ${styles[`button--${type}`]}
         ${isIconOnly ? styles['button--icon-only'] : ''}
-        ${slot ? (slot === 'decrement' ? styles['button--decrement'] : styles['button--increment']) : ""}
+        ${slot ? (slot === 'decrement' ? styles['button--decrement'] : styles['button--increment']) : ''}
       `}
       isDisabled={disabled}
       aria-label={ariaLabel}
       slot={slot}
-      onClick={onClick}
+      onPress={onPress}
     >
       { icon &&
         <span
           className={`
-            ${styles.button__icon} 
+            ${styles['button__icon']} 
             ${iconPosition ? styles[`button__icon--${iconPosition}`] : ''}
           `}
         >

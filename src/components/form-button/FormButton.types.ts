@@ -24,7 +24,7 @@ export type FormButtonProps = (
   type: ButtonType;
   size: ButtonSize;
   ariaLabel: string;
-  onClick?: () => void;
+  onPress: () => void;
   disabled?: boolean;
   slot?: string;
 };

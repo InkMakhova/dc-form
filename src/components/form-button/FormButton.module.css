@@ -4,7 +4,7 @@
     --color-primary-surface: #F5F9F9;
 
     --color-common-white: #FFFFFF;
-    --color-common--black: #1A1A1A;
+    --color-common-black: #1A1A1A;
 
     --color-grey-200: #EEEEEE;
     --color-grey-300: #DDDDDD;
@@ -21,6 +21,8 @@
     border-radius: 8px;
     line-height: 16px;
     font-weight: 500;
+    outline: none;
+    box-shadow: none;
 }
 
 .button--small {
@@ -113,12 +115,12 @@
 
 .button--secondary-contained {
     background-color: var(--color-grey-200);
-    color: var(--color-common--black);
+    color: var(--color-common-black);
 }
 
 .button--secondary-contained .button__icon path {
-    stroke: var(--color-common--black);
-    fill: var(--color-common--black);
+    stroke: var(--color-common-black);
+    fill: var(--color-common-black);
 }
 
 
@@ -138,13 +140,13 @@
 
 .button--secondary-outlined {
     background: var(--color-common-white);
-    color: var(--color-common--black);
+    color: var(--color-common-black);
     border-color: var(--color-grey-400);
 }
 
 .button--secondary-outlined .button__icon path {
-    stroke: var(--color-common--black);
-    fill: var(--color-common--black);
+    stroke: var(--color-common-black);
+    fill: var(--color-common-black);
 }
 
 .button--secondary-outlined:hover,
