@@ -10,6 +10,7 @@ function FormSlider({label, minValue, maxValue, value, onChange}: FormSliderProp
       value={value}
       onChange={onChange}
       className={styles['slider']}
+      aria-label={!label ? 'Slider Label' : ''}
     >
       { label && <Label>{label}</Label> }
       <SliderTrack className={styles['slider__track']}>

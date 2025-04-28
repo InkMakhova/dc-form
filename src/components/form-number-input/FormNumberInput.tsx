@@ -32,10 +32,10 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
           type={ButtonType.SecondaryContained}
           size={ButtonSize.Small}
           icon={<MinusIcon />}
-          ariaLabel="Decrease volume"
+          ariaLabel="Decrease size"
           slot="decrement"
           disabled={disabled || Number(value) <= min}
-          onClick={onDecrement}
+          onPress={onDecrement}
         />
         {/* Number Input */}
         <Input
@@ -43,9 +43,9 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
           value={value}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => { onChange(e.target.value) }}
           className={`
-            ${inputStyles.input__field} 
+            ${inputStyles['input__field']} 
             ${inputStyles[`input__field--${InputSize.Small}`]}
-            ${inputNumberStyles.inputNumber}
+            ${inputNumberStyles['inputNumber']}
           `}
           disabled={disabled}
         />
@@ -54,10 +54,10 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
           type={ButtonType.SecondaryContained}
           size={ButtonSize.Small}
           icon={<PlusIcon />}
-          ariaLabel="Increase volume"
+          ariaLabel="Increase size"
           slot="increment"
           disabled={disabled || Number(value) >= max}
-          onClick={onIncrement}
+          onPress={onIncrement}
         />
       </Group>
     </NumberField>
