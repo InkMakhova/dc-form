@@ -5,10 +5,12 @@ import { InputSize } from './components/form-input/FormInput.types.ts'
 import FormButton from './components/form-button/FormButton.tsx'
 import FormInput from './components/form-input/FormInput.tsx'
 import FormNumberInput from './components/form-number-input/FormNumberInput.tsx'
+import FormSlider from './components/slider/FormSlider.tsx'
 
 function App(): JSX.Element {
   const [inputValue, setInputValue] = useState<string>('');
   const [volumeValue, setVolumeValue] = useState<number>(0);
+  const [slider, setSlider] = useState<number>(0);
 
   return (
     <div>
@@ -25,6 +27,7 @@ function App(): JSX.Element {
             size={ButtonSize.Small}
             text="Button"
             ariaLabel="Do something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Small Primary Contained */}
           <FormButton
@@ -32,6 +35,7 @@ function App(): JSX.Element {
             size={ButtonSize.Small}
             icon={<AddIcon/>}
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Contained */}
           <FormButton
@@ -39,6 +43,7 @@ function App(): JSX.Element {
             size={ButtonSize.Medium}
             icon={<AddIcon/>}
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Small Primary Contained Icon Left */}
           <FormButton
@@ -48,6 +53,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Left}
             text="Button"
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Small Primary Contained Icon Right*/}
           <FormButton
@@ -57,6 +63,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Small Primary Contained Disabled */}
           <FormButton
@@ -67,6 +74,7 @@ function App(): JSX.Element {
             text="Button"
             ariaLabel="Add something button"
             disabled
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Contained */}
           <FormButton
@@ -76,6 +84,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             ariaLabel="Add something button"
             text="Button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Contained Icon Left */}
           <FormButton
@@ -85,6 +94,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Left}
             ariaLabel="Add something button"
             text="Button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Contained Icon Right*/}
           <FormButton
@@ -94,6 +104,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             ariaLabel="Add something button"
             text="Button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Contained Disabled */}
           <FormButton
@@ -104,6 +115,7 @@ function App(): JSX.Element {
             text="Button"
             ariaLabel="Add something button"
             disabled
+            onPress={() => console.log("Click!")}
           />
 
           {/* Medium Primary Outlined */}
@@ -114,6 +126,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             ariaLabel="Add something button"
             text="Button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Outlined Icon Left */}
           <FormButton
@@ -123,6 +136,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Left}
             ariaLabel="Add something button"
             text="Button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Outlined Icon Right*/}
           <FormButton
@@ -132,6 +146,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             ariaLabel="Add something button"
             text="Button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Outlined Disabled */}
           <FormButton
@@ -142,6 +157,7 @@ function App(): JSX.Element {
             text="Button"
             ariaLabel="Add something button"
             disabled
+            onPress={() => console.log("Click!")}
           />
 
           {/* Medium Secondary Contained */}
@@ -152,6 +168,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Secondary Contained Icon Left */}
           <FormButton
@@ -161,6 +178,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Left}
             ariaLabel="Add something button"
             text="Button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Secondary Contained Icon Right*/}
           <FormButton
@@ -170,6 +188,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Secondary Contained Disabled */}
           <FormButton
@@ -180,6 +199,7 @@ function App(): JSX.Element {
             text="Button"
             ariaLabel="Add something button"
             disabled
+            onPress={() => console.log("Click!")}
           />
 
           {/* Medium Secondary Outlined */}
@@ -190,6 +210,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Secondary Outlined Icon Left */}
           <FormButton
@@ -199,6 +220,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Left}
             text="Button"
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Secondary Outlined Icon Right*/}
           <FormButton
@@ -208,6 +230,7 @@ function App(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
+            onPress={() => console.log("Click!")}
           />
           {/* Medium Secondary Outlined Disabled */}
           <FormButton
@@ -218,6 +241,7 @@ function App(): JSX.Element {
             text="Button"
             ariaLabel="Add something button"
             disabled
+            onPress={() => console.log("Click!")}
           />
 
           <h3>Input</h3>
@@ -263,6 +287,17 @@ function App(): JSX.Element {
             onDecrement={(): void => { setVolumeValue(prevState => prevState - 1) }}
             onIncrement={(): void => { setVolumeValue(prevState => prevState + 1) }}
           />
+
+          <h3>Slider</h3>
+          <div style={{marginBottom: 25}}>
+            <FormSlider
+              // label='Slider'
+              minValue={0}
+              maxValue={10}
+              value={slider}
+              onChange={(value: number): void => { setSlider(value)}}
+            />
+          </div>
         </div>
       </section>
     </div>
