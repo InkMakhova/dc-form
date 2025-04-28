@@ -4,18 +4,9 @@ import { Input, Label, TextField } from 'react-aria-components'
 import styles from './FormInput.module.css'
 import { FormInputProps } from './FormInput.types.ts'
 
-function FormInput(props: FormInputProps): JSX.Element {
-  const {
-    label,
-    placeholder,
-    size,
-    value,
-    onChange,
-    disabled,
-  } = props;
-
+function FormInput({label, placeholder, size, value, onChange, disabled}: FormInputProps): JSX.Element {
   return (
-    <TextField className={styles.input__container} isDisabled={disabled}>
+    <TextField className={styles['input__container']} isDisabled={disabled}>
       <Label>{label}</Label>
       <Input
         placeholder={placeholder}

@@ -6,7 +6,7 @@
     --color-primary-surface: #F5F9F9;
 
     --color-common-white: #FFFFFF;
-    --color-common--black: #1A1A1A;
+    --color-common-black: #1A1A1A;
 
     --color-grey-50: #FAFAFA;
     --color-grey-200: #EEEEEE;
@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
     gap: 8px;
 }
 
