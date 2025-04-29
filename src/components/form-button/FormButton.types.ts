@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export enum ButtonType {
+export enum ButtonVariant {
   PrimaryContained = 'primary-contained',
   PrimaryOutlined = 'primary-outlined',
   SecondaryContained = 'secondary-contained',
@@ -21,10 +21,11 @@ export type FormButtonProps = (
   | { icon: ReactNode; text?: string; iconPosition?: IconPosition; }
   | { text: string; icon?: ReactNode; iconPosition?: IconPosition; }
   ) & {
-  type: ButtonType;
+  type: 'button' | 'submit' | 'reset';
+  variant: ButtonVariant;
   size: ButtonSize;
   ariaLabel: string;
-  onPress: () => void;
+  onPress?: () => void;
   disabled?: boolean;
   slot?: string;
 };

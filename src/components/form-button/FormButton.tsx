@@ -6,6 +6,7 @@ import { FormButtonProps } from './FormButton.types.ts'
 function FormButton(props: FormButtonProps): JSX.Element {
   const {
     type,
+    variant,
     size,
     icon,
     iconPosition,
@@ -21,10 +22,11 @@ function FormButton(props: FormButtonProps): JSX.Element {
   // Render
   return (
     <Button
+      type={type}
       className={`
         ${styles['button']}
         ${styles[`button--${size}`]}
-        ${styles[`button--${type}`]}
+        ${styles[`button--${variant}`]}
         ${isIconOnly ? styles['button--icon-only'] : ''}
         ${slot ? (slot === 'decrement' ? styles['button--decrement'] : styles['button--increment']) : ''}
       `}

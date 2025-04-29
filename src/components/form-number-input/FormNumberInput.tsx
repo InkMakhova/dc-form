@@ -1,11 +1,11 @@
-import * as React from 'react'
-import { JSX } from 'react'
+// import * as React from 'react'
+import {JSX} from 'react'
 import { Group, Input, Label, NumberField } from 'react-aria-components'
 import PlusIcon from '../../assets/plus.svg?react'
 import MinusIcon from '../../assets/minus.svg?react'
 import inputStyles from '../form-input/FormInput.module.css'
 import inputNumberStyles from './FormNumberInput.module.css'
-import { ButtonSize, ButtonType } from '../form-button/FormButton.types.ts'
+import { ButtonSize, ButtonVariant } from '../form-button/FormButton.types.ts'
 import { FormNumberInputProps } from './FormNumberInput.types.ts'
 import { InputSize } from '../form-input/FormInput.types.ts'
 import FormButton from '../form-button/FormButton.tsx'
@@ -16,20 +16,29 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
     placeholder,
     min,
     max,
+    name,
     value,
     disabled,
-    onChange,
-    onDecrement,
+    step,
     onIncrement,
+    onDecrement
   } = props;
 
   return (
-    <NumberField minValue={min} maxValue={max} className={inputStyles['input__container']}>
+    <NumberField
+      minValue={min}
+      maxValue={max}
+      step={step}
+      value={value}
+      className={inputStyles['input__container']}
+      isReadOnly
+    >
       <Label>{label}</Label>
       <Group className={inputNumberStyles['inputNumber__group-container']}>
         {/* Decrement Button */}
         <FormButton
-          type={ButtonType.SecondaryContained}
+          type="button"
+          variant={ButtonVariant.SecondaryContained}
           size={ButtonSize.Small}
           icon={<MinusIcon />}
           ariaLabel="Decrease size"
@@ -39,9 +48,10 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
         />
         {/* Number Input */}
         <Input
+          name={name}
           placeholder={placeholder}
-          value={value}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => { onChange(e.target.value) }}
+          // value={value}
+          // onChange={(e: React.ChangeEvent<HTMLInputElement>) => { onChange(e.target.value) }}
           className={`
             ${inputStyles['input__field']} 
             ${inputStyles[`input__field--${InputSize.Small}`]}
@@ -51,7 +61,8 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
         />
         {/* Increment Button */}
         <FormButton
-          type={ButtonType.SecondaryContained}
+          type="button"
+          variant={ButtonVariant.SecondaryContained}
           size={ButtonSize.Small}
           icon={<PlusIcon />}
           ariaLabel="Increase size"

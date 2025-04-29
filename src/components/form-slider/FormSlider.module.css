@@ -2,6 +2,8 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 8px;
+    min-width: 150px;
+    width: 100%;
 }
 
 .slider label {
@@ -17,6 +19,7 @@
     width: 100%;
     height: 4px;
     background-color: var(--color-grey-300);
+    border-radius: 8px;
 }
 
 .slider__track .slider__progress {
@@ -27,6 +30,7 @@
     width: 50%;
     transform: translateY(-50%);
     left: 0;
+    border-radius: 8px;
 }
 
 .slider__thumb {

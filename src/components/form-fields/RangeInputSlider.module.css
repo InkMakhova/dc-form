@@ -1,0 +1,13 @@
+.range-input-slider {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    gap: 8px;
+}
+
+.range-input-slider__slider {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    align-self: end;
+}

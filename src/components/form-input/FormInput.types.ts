@@ -9,7 +9,8 @@ export type FormInputProps = {
   label: string;
   placeholder?: string;
   size: InputSize,
-  value: string,
-  onChange: FormInputOnChange,
+  name: string,
+  // value: string,
+  // onChange: FormInputOnChange,
   disabled?: boolean;
 };
