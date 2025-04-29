@@ -1,9 +1,9 @@
 export type FormNumberInputProps = {
+  name: string;
   label: string;
   placeholder?: string;
   min: number,
   max: number;
-  name: string;
   value: number,
   disabled?: boolean;
   step: number;

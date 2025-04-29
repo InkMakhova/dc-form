@@ -1,35 +1,54 @@
+import { JSX, useEffect, useState } from 'react'
 import styles from './RangeInputSlider.module.css'
-import FormNumberInput from "../form-number-input/FormNumberInput.tsx";
-import {useEffect, useState} from "react";
-import FormSlider from "../form-slider/FormSlider.tsx";
+import { RangeInputSliderTypesProps } from './RangeInputSlider.types.ts'
+import FormNumberInput from '../form-number-input/FormNumberInput.tsx'
+import FormSlider from '../form-slider/FormSlider.tsx'
 
-function RangeInputSlider({inputName, inputLabel, sliderAriaLabel, min, max, step, defaultValue}) {
+function RangeInputSlider(props: RangeInputSliderTypesProps): JSX.Element {
+  const {
+    inputName,
+    inputLabel,
+    sliderAriaLabel,
+    min,
+    max,
+    step,
+    defaultValue
+  } = props;
+
+  // State
   const [state, setState] = useState(defaultValue);
 
+  // Handlers
   const increment = () => { setState(prevState => prevState + step) }
   const decrement = () => { setState(prevState => prevState - step) }
-  const handleChange = (value) => { setState(value) }
+  const handleChange = (value: number) => { setState(value) }
 
   // Update state
   useEffect(() => { setState(defaultValue) }, [defaultValue])
 
+  // Render
   return (
     <div className={styles['range-input-slider']}>
-      <FormNumberInput
-        name={inputName}
-        label={inputLabel}
-        min={min}
-        max={max}
-        step={step}
-        value={state}
-        onIncrement={increment}
-        onDecrement={decrement}
-      />
+      {/* Input control */}
+      <div className={styles['range-input-slider__input']}>
+        <FormNumberInput
+          name={inputName}
+          label={inputLabel}
+          min={min}
+          max={max}
+          step={step}
+          value={state}
+          onIncrement={increment}
+          onDecrement={decrement}
+        />
+      </div>
+
+      {/* Slider */}
       <div className={styles['range-input-slider__slider']}>
         <FormSlider
           ariaLabel={sliderAriaLabel}
-          minValue={min}
-          maxValue={max}
+          min={min}
+          max={max}
           step={step}
           value={state}
           onChange={handleChange}

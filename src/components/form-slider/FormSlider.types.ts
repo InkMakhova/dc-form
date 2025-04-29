@@ -2,9 +2,9 @@ export type FormSliderProps = (
   | { label: string; ariaLabel?: string; }
   | { ariaLabel: string; label?: string; }
   ) & {
-  minValue: number;
-  maxValue: number;
+  min: number;
+  max: number;
   value: number;
+  step: number;
   onChange: (value: number) => void;
-  step?: number;
 };

@@ -1,5 +1,5 @@
 // import * as React from 'react'
-import {JSX} from 'react'
+import { JSX } from 'react'
 import { Group, Input, Label, NumberField } from 'react-aria-components'
 import PlusIcon from '../../assets/plus.svg?react'
 import MinusIcon from '../../assets/minus.svg?react'
@@ -12,14 +12,14 @@ import FormButton from '../form-button/FormButton.tsx'
 
 function FormNumberInput(props: FormNumberInputProps): JSX.Element {
   const {
+    name,
     label,
     placeholder,
     min,
     max,
-    name,
+    step,
     value,
     disabled,
-    step,
     onIncrement,
     onDecrement
   } = props;
@@ -34,7 +34,7 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
       isReadOnly
     >
       <Label>{label}</Label>
-      <Group className={inputNumberStyles['inputNumber__group-container']}>
+      <Group className={inputNumberStyles['input-number__group-container']}>
         {/* Decrement Button */}
         <FormButton
           type="button"
@@ -50,12 +50,10 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
         <Input
           name={name}
           placeholder={placeholder}
-          // value={value}
-          // onChange={(e: React.ChangeEvent<HTMLInputElement>) => { onChange(e.target.value) }}
           className={`
             ${inputStyles['input__field']} 
             ${inputStyles[`input__field--${InputSize.Small}`]}
-            ${inputNumberStyles['inputNumber']}
+            ${inputNumberStyles['input-number']}
           `}
           disabled={disabled}
         />

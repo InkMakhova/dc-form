@@ -1,12 +1,13 @@
+import { JSX } from 'react'
 import { Label, Slider, SliderThumb, SliderTrack } from 'react-aria-components'
 import styles from './FormSlider.module.css'
 import { FormSliderProps } from './FormSlider.types.ts'
 
-function FormSlider({label, ariaLabel, minValue, maxValue, value, step, onChange}: FormSliderProps) {
+function FormSlider({label, ariaLabel, min, max, value, step, onChange}: FormSliderProps): JSX.Element {
   return (
     <Slider
-      minValue={minValue}
-      maxValue={maxValue}
+      minValue={min}
+      maxValue={max}
       value={value}
       onChange={onChange}
       className={styles['slider']}
@@ -15,7 +16,10 @@ function FormSlider({label, ariaLabel, minValue, maxValue, value, step, onChange
     >
       { label && <Label>{label}</Label> }
       <SliderTrack className={styles['slider__track']}>
-        <div className={styles['slider__progress']} style={{ width: ((value - minValue) / (maxValue - minValue)) * 100 + "%" }}/>
+        <div
+          className={styles['slider__progress']}
+          style={{ width: ((value - min) / (max - min)) * 100 + '%' }}
+        />
         <SliderThumb className={styles['slider__thumb']}/>
       </SliderTrack>
     </Slider>

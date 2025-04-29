@@ -1,6 +1,7 @@
 import { useActionState, useState } from 'react'
 import { Form } from 'react-aria-components'
 import DeleteIcon from '../../assets/delete.svg?react'
+import buttonStyles from '../form-button/FormButton.module.css'
 import styles from './MainForm.module.css'
 import { InputSize } from '../form-input/FormInput.types.ts'
 import { ButtonSize, ButtonVariant } from '../form-button/FormButton.types.ts'
@@ -9,10 +10,10 @@ import FormInput from '../form-input/FormInput.tsx'
 import FormButton from '../form-button/FormButton.tsx'
 
 function MainForm() {
-  const minSize = 2.5;
-  const maxSize = 8;
+  const minSize = -5;
+  const maxSize = 5;
   const step = 0.5;
-  const defaultSize = 5;
+  const defaultSize = 0;
 
   const initialState = {
     data: { name: '', size: defaultSize },
@@ -35,24 +36,26 @@ function MainForm() {
 
   return (
     <Form action={submitAction} className={styles['form']}>
-      {/* Name */}
-      <FormInput
-        label="Name"
-        name="name"
-        size={InputSize.Medium}
-        placeholder="enter text"
-      />
+      <div className={styles['form-inputs__container']}>
+        {/* Name */}
+        <FormInput
+          label="Name"
+          name="name"
+          size={InputSize.Medium}
+          placeholder="enter text"
+        />
 
-      {/* Size Range Components: Input & Slider */}
-      <RangeInputSlider
-        inputName="size"
-        inputLabel="Size (GB)"
-        sliderAriaLabel="Size (GB)"
-        defaultValue={state.data.size}
-        min={minSize}
-        max={maxSize}
-        step={step}
-      />
+        {/* Size Range Components: Input & Slider */}
+        <RangeInputSlider
+          inputName="size"
+          inputLabel="Size (GB)"
+          sliderAriaLabel="Size (GB)"
+          defaultValue={state.data.size}
+          min={minSize}
+          max={maxSize}
+          step={step}
+        />
+      </div>
 
       {/* Form Buttons*/}
       <div className={styles['form-buttons__container']}>
@@ -60,7 +63,7 @@ function MainForm() {
         <FormButton
           type="reset"
           variant={ButtonVariant.PrimaryOutlined}
-          icon={<DeleteIcon />}
+          icon={<DeleteIcon className={`${buttonStyles['button__icon']} ${buttonStyles['button__icon--delete']}`}/>}
           size={ButtonSize.Medium}
           ariaLabel="Reset"
           text="Reset"
@@ -76,7 +79,7 @@ function MainForm() {
         />
       </div>
 
-      {}
+     
     </Form>
   )
 }

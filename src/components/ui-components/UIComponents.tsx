@@ -302,8 +302,8 @@ function UIComponents(): JSX.Element {
         <div style={{marginBottom: 25}}>
           <FormSlider
             ariaLabel='Slider'
-            minValue={0}
-            maxValue={10}
+            min={0}
+            max={10}
             step={1}
             value={sliderValue}
             onChange={(value: number): void => { setSliderValue(value) }}

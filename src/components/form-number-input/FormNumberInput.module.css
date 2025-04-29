@@ -1,10 +1,15 @@
-.inputNumber__group-container {
+.input-number {
+    min-width: 150px;
+    width: 30%;
+}
+
+.input-number__group-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.inputNumber__group-container button {
+.input-number__group-container button {
     position: absolute;
     z-index: 1;
     height: 20px;
@@ -12,15 +17,15 @@
     border-radius: 2px;
 }
 
-.inputNumber__group-container button:first-of-type {
+.input-number__group-container button:first-of-type {
     left: 4px;
 }
 
-.inputNumber__group-container button:last-of-type {
+.input-number__group-container button:last-of-type {
     right: 4px;
 }
 
-.inputNumber__group-container input {
+.input-number__group-container input {
     flex: 1;
     text-align: center;
     padding-left: 30px;

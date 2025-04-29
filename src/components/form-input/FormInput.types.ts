@@ -3,14 +3,10 @@ export enum InputSize {
   Medium = 'medium'
 }
 
-export type FormInputOnChange = (value: string) => void;
-
 export type FormInputProps = {
+  name: string,
   label: string;
   placeholder?: string;
   size: InputSize,
-  name: string,
-  // value: string,
-  // onChange: FormInputOnChange,
   disabled?: boolean;
 };
