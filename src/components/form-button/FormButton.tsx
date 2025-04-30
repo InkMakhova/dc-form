@@ -34,6 +34,7 @@ function FormButton(props: FormButtonProps): JSX.Element {
       aria-label={ariaLabel}
       slot={slot}
       onPress={onPress}
+      data-testid='form-button'
     >
       { icon &&
         <span
