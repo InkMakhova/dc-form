@@ -12,6 +12,6 @@ export default defineConfig({
         exportType: 'default',
       },
       include: "**/*.svg?react",
-    })
+    }),
   ],
 })

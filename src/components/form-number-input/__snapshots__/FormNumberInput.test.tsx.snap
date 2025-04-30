@@ -1,0 +1,126 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    class="_input__container_7e3432"
+    data-rac=""
+  >
+    <label
+      class="react-aria-Label"
+      for="react-aria-«r1s»"
+      id="react-aria-«r1u»"
+    >
+      Size
+    </label>
+    <div
+      class="_input-number__group-container_9885f5"
+      data-rac=""
+      role="group"
+    >
+      <button
+        aria-controls="react-aria-«r1s»"
+        aria-label="Decrease size"
+        aria-labelledby="react-aria-«r23» react-aria-«r1u»"
+        class="
+        _button_4e4ded
+        _button--small_4e4ded
+        _button--secondary-contained_4e4ded
+        _button--icon-only_4e4ded
+        _button--decrement_4e4ded
+      "
+        data-rac=""
+        data-testid="form-button"
+        id="react-aria-«r23»"
+        slot="decrement"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="
+            _button__icon_4e4ded 
+            
+          "
+        >
+          <svg
+            fill="none"
+            height="2"
+            viewBox="0 0 14 2"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 1.99921V-0.000671387H13.9992V1.99921H0Z"
+              fill="#1A1A1A"
+            />
+          </svg>
+        </span>
+      </button>
+      <input
+        aria-labelledby="react-aria-«r1u»"
+        aria-readonly="true"
+        aria-roledescription="Number field"
+        autocomplete="off"
+        autocorrect="off"
+        class="
+            _input__field_7e3432 
+            _input__field--small_7e3432
+            _input-number_9885f5
+          "
+        data-rac=""
+        id="react-aria-«r1s»"
+        inputmode="numeric"
+        name="size"
+        placeholder="Size"
+        readonly=""
+        spellcheck="false"
+        tabindex="0"
+        title=""
+        type="text"
+        value="10"
+      />
+      <button
+        aria-controls="react-aria-«r1s»"
+        aria-label="Increase size"
+        aria-labelledby="react-aria-«r22» react-aria-«r1u»"
+        class="
+        _button_4e4ded
+        _button--small_4e4ded
+        _button--secondary-contained_4e4ded
+        _button--icon-only_4e4ded
+        _button--increment_4e4ded
+      "
+        data-disabled="true"
+        data-rac=""
+        data-testid="form-button"
+        disabled=""
+        id="react-aria-«r22»"
+        slot="increment"
+        tabindex="-1"
+        type="button"
+      >
+        <span
+          class="
+            _button__icon_4e4ded 
+            
+          "
+        >
+          <svg
+            fill="none"
+            height="14"
+            viewBox="0 0 14 14"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.49988 0.499695V6.49969H13.4989V7.49969H7.49988V13.4987H6.49988V7.49969H0.499878V6.49969H6.49988V0.499695H7.49988Z"
+              fill="#1A1A1A"
+              stroke="black"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

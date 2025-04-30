@@ -1,35 +1,5 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Input matches snapshot 1`] = `
-<div>
-  <div
-    class="_input__container_7e3432"
-    data-rac=""
-  >
-    <label
-      class="react-aria-Label"
-      for="react-aria-«rp»"
-      id="react-aria-«rq»"
-    >
-      Label
-    </label>
-    <input
-      aria-labelledby="react-aria-«rq»"
-      class="_input__field_7e3432 _input__field--medium_7e3432"
-      data-rac=""
-      data-testid="form-input"
-      id="react-aria-«rp»"
-      name="snapshot"
-      placeholder="Text"
-      tabindex="0"
-      title=""
-      type="text"
-      value=""
-    />
-  </div>
-</div>
-`;
-
 exports[`matches snapshot 1`] = `
 <div>
   <div
@@ -47,7 +17,6 @@ exports[`matches snapshot 1`] = `
       aria-labelledby="react-aria-«rq»"
       class="_input__field_7e3432 _input__field--medium_7e3432"
       data-rac=""
-      data-testid="form-input"
       id="react-aria-«rp»"
       name="snapshot"
       placeholder="Text"

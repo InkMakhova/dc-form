@@ -1,58 +1,56 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import {  expect, vitest} from 'vitest'
+import { expect, vitest} from 'vitest'
 import '@testing-library/jest-dom'
 import DeleteIcon from '../../assets/delete.svg?react'
 import { ButtonSize, ButtonVariant } from './FormButton.types.ts'
 import FormButton from './FormButton'
 
-test('Button renders with text', () => {
+test('renders with text', () => {
   render(
     <FormButton
-      type="button"
-      text="Submit"
+      type='button'
+      text='Submit'
       size={ButtonSize.Medium}
       variant={ButtonVariant.PrimaryContained}
-      ariaLabel="Submit"
+      ariaLabel='Submit'
     />
   )
-
-  expect(screen.getByText("Submit")).toBeInTheDocument();
+  expect(screen.getByText('Submit')).toBeInTheDocument();
 });
 
-test('Button renders with icon only', () => {
+test('renders with icon only', () => {
   render(
       <FormButton
-        type="button"
+        type='button'
         icon={<DeleteIcon />}
-        ariaLabel="Delete"
+        ariaLabel='Delete'
         size={ButtonSize.Small}
         variant={ButtonVariant.PrimaryOutlined}
       />
   )
-  expect(screen.getByLabelText("Delete")).toBeInTheDocument();
+  expect(screen.getByLabelText('Delete')).toBeInTheDocument();
 });
 
-test('Button applies correct classes for size and variant', () => {
+test('applies correct classes for size and variant', () => {
   render(
     <FormButton
-      type="button"
-      text="Test"
+      type='button'
+      text='Test'
       size={ButtonSize.Medium}
       variant={ButtonVariant.PrimaryContained}
-      ariaLabel="Test"
+      ariaLabel='Test'
     />);
-
   const button = screen.getByTestId('form-button');
   expect(button.className).toMatch(/button--medium/);
   expect(button.className).toMatch(/button--primary-contained/);
 });
 
-test('Button applies icon-only class if no text is provided', () => {
+test('applies icon-only class if no text is provided', () => {
   render(
     <FormButton
-      type="button"
+      type='button'
       icon={<DeleteIcon />}
-      ariaLabel="Delete"
+      ariaLabel='Delete'
       size={ButtonSize.Small}
       variant={ButtonVariant.PrimaryOutlined}
     />
@@ -61,33 +59,33 @@ test('Button applies icon-only class if no text is provided', () => {
   expect(button.className).toMatch(/button--icon-only/);
 });
 
-test('Button calls onPress when clicked', () => {
+test('calls onPress when clicked', () => {
   const handlePress = vitest.fn();
   render(
     <FormButton
-      type="button"
-      text="Click"
+      type='button'
+      text='Click'
       onPress={handlePress}
       size={ButtonSize.Medium}
       variant={ButtonVariant.PrimaryContained}
-      ariaLabel="Click"
+      ariaLabel='Click'
     />
   );
   fireEvent.click(screen.getByTestId('form-button'));
   expect(handlePress).toHaveBeenCalledTimes(1);
 });
 
-test('Button does not call onPress when disabled', () => {
+test('does not call onPress when disabled', () => {
   const handlePress = vitest.fn();
   render(
     <FormButton
-      type="button"
-      text="Click"
+      type='button'
+      text='Click'
       onPress={handlePress}
       disabled
       size={ButtonSize.Medium}
       variant={ButtonVariant.PrimaryContained}
-      ariaLabel="Click"
+      ariaLabel='Click'
     />);
   fireEvent.click(screen.getByTestId('form-button'));
   expect(handlePress).not.toHaveBeenCalled();

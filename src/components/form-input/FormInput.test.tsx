@@ -3,7 +3,7 @@ import { expect } from 'vitest'
 import { InputSize } from './FormInput.types.ts'
 import FormInput from './FormInput.tsx'
 
-test('Input has correct name attribute', () => {
+test('has correct name attribute', () => {
   render(
     <FormInput
       name="custom-name"
@@ -16,7 +16,7 @@ test('Input has correct name attribute', () => {
   expect(input).toHaveAttribute('name');
 });
 
-test('Input renders with label', () => {
+test('renders with label', () => {
   render(
     <FormInput
       name="medium-input"
@@ -28,7 +28,7 @@ test('Input renders with label', () => {
   expect(screen.getByLabelText("Label")).toBeInTheDocument();
 });
 
-test('Input applies correct classes for size', () => {
+test('applies correct classes for size', () => {
   render(
     <FormInput
       name="medium-input"
@@ -41,7 +41,7 @@ test('Input applies correct classes for size', () => {
   expect(input.className).toMatch(/input__field--medium/);
 });
 
-test('Input displays correct placeholder', () => {
+test('displays correct placeholder', () => {
   render(
     <FormInput
       name="medium-input"
@@ -53,7 +53,7 @@ test('Input displays correct placeholder', () => {
   expect(screen.getByPlaceholderText('enter text')).toBeInTheDocument();
 });
 
-test('Input is disabled when disabled prop is true', () => {
+test('is disabled when disabled prop is true', () => {
   render(
     <FormInput
       name="disabled-input"
