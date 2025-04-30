@@ -12,6 +12,10 @@
     box-shadow: none;
 }
 
+.button:focus {
+    outline: 4px auto var(--color-primary-dark);
+}
+
 .button--small {
     gap: 4px;
     height: 24px;

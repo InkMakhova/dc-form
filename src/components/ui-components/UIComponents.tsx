@@ -292,8 +292,8 @@ function UIComponents(): JSX.Element {
         <div className={styles['ui-component__container']}>
           <FormNumberInput
             name="number-input"
-            label="Size (GB)"
-            placeholder="Input size"
+            label="Label"
+            placeholder="Input"
             min={0}
             max={10}
             step={1}
