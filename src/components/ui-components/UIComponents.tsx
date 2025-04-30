@@ -13,9 +13,7 @@ function UIComponents(): JSX.Element {
   const [sliderValue, setSliderValue] = useState<number>(0);
 
   return (
-    <section className={styles['ui-components']}>
-      <h2>Variations of components</h2>
-
+    <>
       {/* Buttons */}
       <section>
         <h3>Button</h3>
@@ -320,7 +318,7 @@ function UIComponents(): JSX.Element {
           />
         </div>
       </section>
-    </section>
+    </>
   )
 }
 
