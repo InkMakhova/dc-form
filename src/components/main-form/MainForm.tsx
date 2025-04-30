@@ -11,10 +11,10 @@ import FormInput from '../form-input/FormInput.tsx'
 import FormButton from '../form-button/FormButton.tsx'
 
 function MainForm() {
-  const minSize = -5;
-  const maxSize = 5;
-  const step = 0.5;
-  const defaultSize = 0;
+  const minSize = 10;
+  const maxSize = 100;
+  const step = 5;
+  const defaultSize = 55;
 
   const initialState = {
     data: { name: '', size: defaultSize },
@@ -46,9 +46,11 @@ function MainForm() {
     }
   }
 
+  function reset() { setResults(null) }
+
   // Render
   return (
-    <Form action={submitAction} className={styles['form']}>
+    <Form action={submitAction} className={styles['form']} onReset={reset}>
       <div className={styles['form-inputs__container']}>
         {/* Name */}
         <FormInput
