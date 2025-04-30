@@ -22,18 +22,28 @@ function MainForm() {
   const [state,submitAction,isPending] = useActionState(submitForm,initialState);
   const [results, setResults] = useState(null);
 
+  async function fakePost(data) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ ...data, submittedAt: new Date().toLocaleTimeString() });
+      }, 1000);
+    });
+  }
+
   async function submitForm(prevState,formData) {
     const name = formData.get('name');
-    const size = formData.get('size')
+    const size = parseFloat(formData.get('size'));
 
     try {
       const response = await fakePost({ name, size })
-      return { data: response, error: null }
+      setResults(response);
+      return initialState;
     } catch (e) {
       return { ...prevState, error: e.message }
     }
   }
 
+  // Render
   return (
     <Form action={submitAction} className={styles['form']}>
       <div className={styles['form-inputs__container']}>
@@ -75,11 +85,17 @@ function MainForm() {
           variant={ButtonVariant.PrimaryContained}
           size={ButtonSize.Medium}
           ariaLabel="Submit"
-          text="Submit"
+          text={isPending ? "Submitting..." : "Submit"}
         />
       </div>
 
-     
+      { results && (
+        <div className={styles['form-result']}>
+          <p><strong>Submitted name:</strong> {results.name}</p>
+          <p><strong>Submitted size:</strong> {results.size} GB</p>
+          <p><strong>Time:</strong> {results.submittedAt}</p>
+        </div>
+      )}
     </Form>
   )
 }
