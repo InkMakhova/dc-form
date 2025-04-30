@@ -1,0 +1,17 @@
+.ui-components {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.ui-component__container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 30px;
+}
+
+.ui-component__slider {
+    width: 50%;
+    padding: 20px 0;
+}
