@@ -20,7 +20,7 @@ function MainForm() {
     data: { name: '', size: defaultSize },
     error: null
   }
-  const [state,submitAction,isPending] = useActionState<FormState, FormDataType>(submitForm,initialState);
+  const [state,submitAction,isPending] = useActionState<FormState, FormData>(submitForm,initialState);
   const [results, setResults] = useState<SubmitResult | null>(null);
 
   async function fakePost(data: FormDataType): Promise<SubmitResult> {
