@@ -5,6 +5,7 @@ import buttonStyles from '../form-button/FormButton.module.css'
 import styles from './MainForm.module.css'
 import { InputSize } from '../form-input/FormInput.types.ts'
 import { ButtonSize, ButtonVariant } from '../form-button/FormButton.types.ts'
+import { FormDataType, SubmitResult, FormState} from "./MainForm.types.ts";
 import RangeInputSlider from '../form-fields/RangeInputSlider.tsx'
 import FormInput from '../form-input/FormInput.tsx'
 import FormButton from '../form-button/FormButton.tsx'
@@ -19,10 +20,10 @@ function MainForm() {
     data: { name: '', size: defaultSize },
     error: null
   }
-  const [state,submitAction,isPending] = useActionState(submitForm,initialState);
-  const [results, setResults] = useState(null);
+  const [state,submitAction,isPending] = useActionState<FormState, FormDataType>(submitForm,initialState);
+  const [results, setResults] = useState<SubmitResult | null>(null);
 
-  async function fakePost(data) {
+  async function fakePost(data: FormDataType): Promise<SubmitResult> {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ ...data, submittedAt: new Date().toLocaleTimeString() });
@@ -30,16 +31,18 @@ function MainForm() {
     });
   }
 
-  async function submitForm(prevState,formData) {
-    const name = formData.get('name');
-    const size = parseFloat(formData.get('size'));
+  async function submitForm(prevState: FormState, formData: FormData): Promise<FormState> {
+    const name = formData.get('name') as string;
+    const sizeValue = formData.get('size');
+    const size = sizeValue !== null ? parseFloat(sizeValue as string) : NaN;
 
     try {
       const response = await fakePost({ name, size })
       setResults(response);
       return initialState;
-    } catch (e) {
-      return { ...prevState, error: e.message }
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : 'Unknown error';
+      return { ...prevState, error: message }
     }
   }
 
@@ -90,12 +93,19 @@ function MainForm() {
       </div>
 
       { results && (
-        <div className={styles['form-result']}>
-          <p><strong>Submitted name:</strong> {results.name}</p>
-          <p><strong>Submitted size:</strong> {results.size} GB</p>
-          <p><strong>Time:</strong> {results.submittedAt}</p>
+          <div>
+            <p><strong>Submitted name:</strong> {results.name}</p>
+            <p><strong>Submitted size:</strong> {results.size} GB</p>
+            <p><strong>Time:</strong> {results.submittedAt}</p>
+          </div>
+        )
+      }
+
+      { state.error &&
+        <div>
+          <p><strong>Error:</strong> {state.error}</p>
         </div>
-      )}
+      }
     </Form>
   )
 }
