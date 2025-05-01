@@ -27,5 +27,6 @@ export type FormButtonProps = (
   ariaLabel: string;
   onPress?: () => void;
   disabled?: boolean;
+  pending?: boolean;
   slot?: string;
 };

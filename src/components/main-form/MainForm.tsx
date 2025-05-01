@@ -91,6 +91,7 @@ function MainForm() {
           size={ButtonSize.Medium}
           ariaLabel="Submit"
           text={isPending ? "Submitting..." : "Submit"}
+          pending={isPending}
         />
       </div>
 
