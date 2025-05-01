@@ -1,0 +1,57 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches snapshot 1`] = `
+<div>
+  <div
+    aria-label=""
+    aria-labelledby="react-aria-«rv»"
+    class="_slider_f7dc6d"
+    data-orientation="horizontal"
+    data-rac=""
+    id="react-aria-«ru»"
+    role="group"
+  >
+    <label
+      class="react-aria-Label"
+      id="react-aria-«rv»"
+    >
+      Opacity
+    </label>
+    <div
+      class="_slider__track_f7dc6d"
+      data-orientation="horizontal"
+      data-rac=""
+      style="position: relative;"
+    >
+      <div
+        class="_slider__progress_f7dc6d"
+        style="width: 30%;"
+      />
+      <div
+        class="_slider__thumb_f7dc6d"
+        data-rac=""
+        style="position: absolute; left: 30%; transform: translate(-50%, -50%);"
+      >
+        <div
+          style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        >
+          <input
+            aria-describedby=""
+            aria-details=""
+            aria-labelledby="react-aria-«rv»"
+            aria-orientation="horizontal"
+            aria-valuetext="30"
+            id="react-aria-«rv»-0"
+            max="100"
+            min="0"
+            step="5"
+            tabindex="0"
+            type="range"
+            value="30"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

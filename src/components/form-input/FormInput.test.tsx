@@ -70,9 +70,9 @@ test('is disabled when disabled prop is true', () => {
 test('matches snapshot', () => {
   const { container } = render(
     <FormInput
-      name="snapshot"
-      label="Label"
-      placeholder="Text"
+      name='snapshot'
+      label='Label'
+      placeholder='Text'
       size={InputSize.Medium}
     />
   )

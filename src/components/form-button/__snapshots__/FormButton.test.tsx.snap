@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`matches snapshot 1`] = `
+<div>
+  <button
+    aria-label="Click"
+    class="
+        _button_4e4ded
+        _button--medium_4e4ded
+        _button--primary-contained_4e4ded
+        
+        
+      "
+    data-disabled="true"
+    data-rac=""
+    data-testid="form-button"
+    disabled=""
+    id="react-aria-«rc»"
+    type="button"
+  >
+    Click
+  </button>
+</div>
+`;

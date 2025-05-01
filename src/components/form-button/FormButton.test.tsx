@@ -90,3 +90,19 @@ test('does not call onPress when disabled', () => {
   fireEvent.click(screen.getByTestId('form-button'));
   expect(handlePress).not.toHaveBeenCalled();
 });
+
+test('matches snapshot', () => {
+  const handlePress = vitest.fn();
+  const { container } = render(
+    <FormButton
+      type='button'
+      text='Click'
+      onPress={handlePress}
+      disabled
+      size={ButtonSize.Medium}
+      variant={ButtonVariant.PrimaryContained}
+      ariaLabel='Click'
+    />
+  )
+  expect(container).toMatchSnapshot();
+});

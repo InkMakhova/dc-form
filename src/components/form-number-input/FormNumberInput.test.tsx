@@ -3,16 +3,18 @@ import { expect, vitest} from 'vitest'
 import FormNumberInput from './FormNumberInput.tsx';
 
 test('renders input with label', () => {
+  const handleIncrement = vitest.fn()
+  const handleDecrement = vitest.fn()
   render(
     <FormNumberInput
-      name="size"
-      label="Size"
+      name='size'
+      label='Size'
       value={5}
       min={1}
       max={10}
       step={1}
-      onDecrement={() => {}}
-      onIncrement={() => {}}
+      onDecrement={handleDecrement}
+      onIncrement={handleIncrement}
     />
   )
   expect(screen.getByText('Size')).toBeInTheDocument()
@@ -23,8 +25,8 @@ test('calls onIncrement when increment button is clicked', () => {
   const handleDecrement = vitest.fn()
   render(
     <FormNumberInput
-      name="size"
-      label="Size"
+      name='size'
+      label='Size'
       value={5}
       min={1}
       max={10}
@@ -43,8 +45,8 @@ test('calls onDecrement when decrement button is clicked', () => {
   const handleIncrement = vitest.fn()
   render(
     <FormNumberInput
-      name="size"
-      label="Size"
+      name='size'
+      label='Size'
       value={5}
       min={1}
       max={10}
@@ -61,11 +63,10 @@ test('calls onDecrement when decrement button is clicked', () => {
 test('decrement button is disabled at min value', () => {
   const handleDecrement = vitest.fn()
   const handleIncrement = vitest.fn()
-
   render(
     <FormNumberInput
-      name="size"
-      label="Size"
+      name='size'
+      label='Size'
       value={1}
       min={1}
       max={10}
@@ -83,8 +84,8 @@ test('increment button is disabled at max value', () => {
   const handleIncrement = vitest.fn()
   render(
     <FormNumberInput
-      name="size"
-      label="Size"
+      name='size'
+      label='Size'
       value={10}
       min={1}
       max={10}
@@ -102,9 +103,9 @@ test('matches snapshot', () => {
   const handleIncrement = vitest.fn()
   const { container } = render(
     <FormNumberInput
-      name="size"
-      label="Size"
-      placeholder="Size"
+      name='size'
+      label='Size'
+      placeholder='Size'
       value={10}
       min={1}
       max={10}
