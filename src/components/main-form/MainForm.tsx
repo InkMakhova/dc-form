@@ -80,8 +80,8 @@ function MainForm() {
           variant={ButtonVariant.PrimaryOutlined}
           icon={<DeleteIcon className={`${buttonStyles['button__icon']} ${buttonStyles['button__icon--delete']}`}/>}
           size={ButtonSize.Medium}
-          ariaLabel="Reset"
-          text="Reset"
+          ariaLabel="Clear"
+          text="Clear"
         />
 
         {/* Submit */}

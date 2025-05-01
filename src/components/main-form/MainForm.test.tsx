@@ -7,7 +7,7 @@ test('renders form with inputs and buttons', () => {
   expect(screen.getByLabelText(/Name/i)).toBeInTheDocument()
   expect(screen.getByText(/Size \(GB\)/i)).toBeInTheDocument()
   expect(screen.getByRole('button', { name: /Submit/i })).toBeInTheDocument()
-  expect(screen.getByRole('button', { name: /Reset/i })).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: /Clear/i })).toBeInTheDocument()
 })
 
 test('allows typing into input and submitting the form', async () => {
@@ -35,7 +35,7 @@ test('reset button clears results', async () => {
     expect(screen.getByText(/Submitted name:/i)).toBeInTheDocument()
   })
 
-  fireEvent.click(screen.getByRole('button', { name: /Reset/i }))
+  fireEvent.click(screen.getByRole('button', { name: /Clear/i }))
 
   expect(screen.queryByText(/Submitted name:/i)).not.toBeInTheDocument()
 })
