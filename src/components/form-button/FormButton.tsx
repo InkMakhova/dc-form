@@ -13,8 +13,8 @@ function FormButton(props: FormButtonProps): JSX.Element {
     text,
     ariaLabel,
     onPress,
-    disabled,
-    pending,
+    isDisabled,
+    isPending,
     slot
   } = props;
 
@@ -31,7 +31,7 @@ function FormButton(props: FormButtonProps): JSX.Element {
         ${isIconOnly ? styles['button--icon-only'] : ''}
         ${slot ? (slot === 'decrement' ? styles['button--decrement'] : styles['button--increment']) : ''}
       `}
-      isDisabled={disabled || pending === true}
+      isDisabled={isDisabled || isPending === true}
       aria-label={ariaLabel}
       slot={slot}
       onPress={onPress}

@@ -82,7 +82,7 @@ test('does not call onPress when disabled', () => {
       type='button'
       text='Click'
       onPress={handlePress}
-      disabled
+      isDisabled
       size={ButtonSize.Medium}
       variant={ButtonVariant.PrimaryContained}
       ariaLabel='Click'
@@ -98,7 +98,7 @@ test('matches snapshot', () => {
       type='button'
       text='Click'
       onPress={handlePress}
-      disabled
+      isDisabled
       size={ButtonSize.Medium}
       variant={ButtonVariant.PrimaryContained}
       ariaLabel='Click'

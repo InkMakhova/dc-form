@@ -60,7 +60,7 @@ test('is disabled when disabled prop is true', () => {
       label="Disabled"
       placeholder="cannot type"
       size={InputSize.Small}
-      disabled
+      isDisabled
     />
   )
   const input = screen.getByLabelText('Disabled');

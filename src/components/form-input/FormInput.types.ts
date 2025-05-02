@@ -8,5 +8,6 @@ export type FormInputProps = {
   label: string;
   placeholder?: string;
   size: InputSize,
-  disabled?: boolean;
+  isDisabled?: boolean;
+  isRequired?: boolean;
 };

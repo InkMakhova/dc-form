@@ -19,7 +19,7 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
     max,
     step,
     value,
-    disabled,
+    isDisabled,
     onIncrement,
     onDecrement
   } = props;
@@ -43,7 +43,7 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
           icon={<MinusIcon />}
           ariaLabel="Decrease size"
           slot="decrement"
-          disabled={disabled || Number(value) <= min}
+          isDisabled={isDisabled || Number(value) <= min}
           onPress={onDecrement}
         />
         {/* Number Input */}
@@ -55,7 +55,7 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
             ${inputStyles[`input__field--${InputSize.Small}`]}
             ${inputNumberStyles['input-number']}
           `}
-          disabled={disabled}
+          disabled={isDisabled}
         />
         {/* Increment Button */}
         <FormButton
@@ -65,7 +65,7 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
           icon={<PlusIcon />}
           ariaLabel="Increase size"
           slot="increment"
-          disabled={disabled || Number(value) >= max}
+          isDisabled={isDisabled || Number(value) >= max}
           onPress={onIncrement}
         />
       </Group>

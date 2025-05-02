@@ -50,7 +50,7 @@ function MainForm() {
 
   // Render
   return (
-    <Form action={submitAction} className={styles['form']} onReset={reset}>
+    <Form action={submitAction} onReset={reset} className={styles['form']}>
       <div className={styles['form-inputs__container']}>
         {/* Name */}
         <FormInput
@@ -58,6 +58,7 @@ function MainForm() {
           name="name"
           size={InputSize.Medium}
           placeholder="enter text"
+          isRequired={true}
         />
 
         {/* Size Range Components: Input & Slider */}
@@ -91,7 +92,7 @@ function MainForm() {
           size={ButtonSize.Medium}
           ariaLabel="Submit"
           text={isPending ? "Submitting..." : "Submit"}
-          pending={isPending}
+          isPending={isPending}
         />
       </div>
 

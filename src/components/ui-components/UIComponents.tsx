@@ -67,7 +67,7 @@ function UIComponents(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
-            disabled
+            isDisabled
             onPress={() => console.log("Click!")}
           />
           {/* Medium Primary Contained */}
@@ -121,7 +121,7 @@ function UIComponents(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
-            disabled
+            isDisabled
             onPress={() => console.log("Click!")}
           />
 
@@ -167,7 +167,7 @@ function UIComponents(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
-            disabled
+            isDisabled
             onPress={() => console.log("Click!")}
           />
 
@@ -213,7 +213,7 @@ function UIComponents(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
-            disabled
+            isDisabled
             onPress={() => console.log("Click!")}
           />
           {/* Medium Secondary Outlined */}
@@ -258,7 +258,7 @@ function UIComponents(): JSX.Element {
             iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
-            disabled
+            isDisabled
             onPress={() => console.log("Click!")}
           />
         </div>
@@ -281,7 +281,7 @@ function UIComponents(): JSX.Element {
             label="Label"
             placeholder="enter text"
             size={InputSize.Medium}
-            disabled
+            isDisabled
           />
         </div>
       </section>
