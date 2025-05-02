@@ -14,6 +14,10 @@
     border-radius: 8px;
 }
 
+.form-results {
+    color: var(--color-common-black);
+}
+
 .form-inputs__container {
     width: 100%;
     display: flex;

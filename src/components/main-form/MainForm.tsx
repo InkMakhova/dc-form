@@ -96,18 +96,17 @@ function MainForm() {
         />
       </div>
 
-      { results && (
-          <div>
-            <p><strong>Submitted name:</strong> {results.name}</p>
-            <p><strong>Submitted size:</strong> {results.size} GB</p>
-            <p><strong>Time:</strong> {results.submittedAt}</p>
-          </div>
-        )
-      }
+      { (results || state.error) &&
+        <div className={styles['formResults__container']}>
+          { results &&
+            <>
+              <p><strong>Submitted name:</strong> {results.name}</p>
+              <p><strong>Submitted size:</strong> {results.size} GB</p>
+              <p><strong>Time:</strong> {results.submittedAt}</p>
+            </>
+          }
 
-      { state.error &&
-        <div>
-          <p><strong>Error:</strong> {state.error}</p>
+          { state.error && <p><strong>Error:</strong> {state.error}</p> }
         </div>
       }
     </Form>
