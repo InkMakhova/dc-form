@@ -29,7 +29,6 @@ function FormButton(props: FormButtonProps): JSX.Element {
         ${styles[`button--${size}`]}
         ${styles[`button--${variant}`]}
         ${isIconOnly ? styles['button--icon-only'] : ''}
-        ${slot ? (slot === 'decrement' ? styles['button--decrement'] : styles['button--increment']) : ''}
       `}
       isDisabled={isDisabled || isPending === true}
       aria-label={ariaLabel}
@@ -38,10 +37,9 @@ function FormButton(props: FormButtonProps): JSX.Element {
       data-testid='form-button'
     >
       { icon &&
-        <span
-          className={`
-            ${styles['button__icon']} 
-            ${iconPosition ? styles[`button__icon--${iconPosition}`] : ''}
+        <span className={`
+            ${styles['icon']} 
+            ${iconPosition ? styles[`icon--${iconPosition}`] : ''}
           `}
         >
           {icon}

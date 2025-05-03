@@ -30,21 +30,18 @@
     font-size: 16px;
 }
 
+.button--icon-only {
+    flex: 0 0 auto;
+}
+
 .button--icon-only.button--small {
     padding: 4px;
     width: 24px;
-    flex: 0 0 auto;
 }
 
 .button--icon-only.button--medium {
     padding: 8px;
     width: 32px;
-    flex: 0 0 auto;
-}
-
-.button--outlined {
-    border-width: 1px;
-    border-style: solid;
 }
 
 .button--primary-contained {
@@ -52,13 +49,13 @@
     color: var(--color-common-white);
 }
 
-.button--primary-contained .button__icon path {
+.button--primary-contained .icon path {
     stroke: var(--color-common-white);
     fill: var(--color-common-white);
 }
 
 .button--primary-contained:hover,
-.primary-contained:focus {
+.button--primary-contained:focus {
     background: var(--color-primary-dark);
 }
 
@@ -67,7 +64,7 @@
     color: var(--color-grey-500);
 }
 
-.button--primary-contained:disabled .button__icon path {
+.button--primary-contained:disabled .icon path {
     stroke: var(--color-grey-500);
     fill: var(--color-grey-500);
 }
@@ -78,7 +75,7 @@
     border: 1px solid var(--color-primary);
 }
 
-.button--primary-outlined .button__icon path {
+.button--primary-outlined .icon path {
     stroke: var(--color-primary);
     fill: var(--color-primary);
 }
@@ -90,12 +87,12 @@
     border-color: var(--color-primary-dark);
 }
 
-.button--primary-outlined:hover .button__icon path {
+.button--primary-outlined:hover .icon path {
     stroke: var(--color-primary-dark);
     fill: var(--color-primary-dark);
 }
 
-.button--primary-outlined:focus .button__icon path {
+.button--primary-outlined:focus .icon path {
     stroke: var(--color-primary-dark);
     fill: var(--color-primary-dark);
 }
@@ -105,7 +102,7 @@
     border-color: var(--color-grey-300);
 }
 
-.button--primary-outlined:disabled .button__icon path {
+.button--primary-outlined:disabled .icon path {
     stroke: var(--color-grey-500);
     fill: var(--color-grey-500);
 }
@@ -115,7 +112,7 @@
     color: var(--color-common-black);
 }
 
-.button--secondary-contained .button__icon path {
+.button--secondary-contained .icon path {
     stroke: var(--color-common-black);
     fill: var(--color-common-black);
 }
@@ -130,7 +127,7 @@
     color: var(--color-grey-500);
 }
 
-.button--secondary-contained:disabled .button__icon path {
+.button--secondary-contained:disabled .icon path {
     stroke: var(--color-grey-500);
     fill: var(--color-grey-500);
 }
@@ -141,7 +138,7 @@
     border: 1px solid var(--color-grey-400);
 }
 
-.button--secondary-outlined .button__icon path {
+.button--secondary-outlined .icon path {
     stroke: var(--color-common-black);
     fill: var(--color-common-black);
 }
@@ -156,30 +153,30 @@
     border-color: var(--color-grey-300);
 }
 
-.button--secondary-outlined:disabled .button__icon path {
+.button--secondary-outlined:disabled .icon path {
     stroke: var(--color-grey-500);
     fill: var(--color-grey-500);
 }
 
-.button__icon {
+.icon {
     width: 16px;
     height: 16px;
 }
 
-.button__icon svg {
+.icon svg {
     width: 9px;
     height: 9px;
 }
 
-.button__icon .button__icon--delete {
+.icon .button__icon--delete {
     width: 10.67px;
     height: 12px;
 }
 
-.button__icon--left {
+.icon--left {
     order: 0
 }
 
-.button__icon--right {
+.icon--right {
     order: 1
 }
