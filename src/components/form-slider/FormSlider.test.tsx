@@ -32,7 +32,7 @@ test('applies aria-label if no label is given', () => {
   expect(slider).toHaveAttribute('aria-label', 'Slider without visible label');
 })
 
-test('calls onChange when slider is changed', async () => {
+test('calls onChange when slider is changed', () => {
   const handleChange = vitest.fn()
   render(
     <FormSlider
@@ -45,7 +45,7 @@ test('calls onChange when slider is changed', async () => {
     />
   )
   const slider = screen.getByRole('slider')
-  await fireEvent.keyDown(slider, { key: 'ArrowRight' }) // Simulate keyboard interaction
+  fireEvent.keyDown(slider, { key: 'ArrowRight' })
   expect(handleChange).toHaveBeenCalled()
 })
 
