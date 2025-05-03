@@ -1,4 +1,4 @@
-.input__container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +7,7 @@
     gap: 8px;
 }
 
-.input__container label {
+.container label {
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -15,18 +15,40 @@
     color: var(--color-label);
 }
 
-.input__field {
+.input {
     box-sizing: border-box;
     background-color: var(--color-common-white);
     border: 1px solid var(--color-grey-400);
     color: var(--color-common-black);
 }
 
-.input__field::placeholder {
-    color: var(--color-grey-600);
+.input:hover {
+    border-color: var(--color-grey-500);
+    outline: none;
 }
 
-.input__field--small {
+.input:focus {
+    border-width: 2px;
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--color-grey-600);
+    font-weight: 600;
+}
+
+.input:focus::placeholder {
+    opacity: 0;
+}
+
+.input:disabled {
+    background: var(--color-grey-50);
+    border-color: var(--color-grey-400);
+    color: var(--color-grey-500);
+}
+
+.input--small {
     padding: 2px;
     height: 24px;
     border-radius: 4px;
@@ -34,36 +56,10 @@
     font-size: 14px;
 }
 
-.input__field--medium {
+.input--medium {
     padding: 8px 8px 8px 16px;
     height: 32px;
     border-radius: 8px;
     line-height: 16px;
     font-size: 16px;
-}
-
-.input__field::placeholder {
-    color: var(--color-grey-500);
-    font-weight: 600;
-}
-
-.input__field:hover {
-    border-color: var(--color-grey-500);
-    outline: none;
-}
-
-.input__field:focus {
-    border-width: 2px;
-    border-color: var(--color-primary);
-    outline: none;
-}
-
-.input__field:focus::placeholder {
-    opacity: 0;
-}
-
-.input__field:disabled {
-    background: var(--color-grey-50);
-    border-color: var(--color-grey-400);
-    color: var(--color-grey-500);
 }

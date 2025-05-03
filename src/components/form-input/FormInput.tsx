@@ -6,7 +6,7 @@ import { FormInputProps } from './FormInput.types.ts'
 function FormInput({label, placeholder, size, name, isDisabled, isRequired}: FormInputProps): JSX.Element {
   return (
     <TextField
-      className={styles['input__container']}
+      className={styles['container']}
       isDisabled={isDisabled}
       isRequired={isRequired}
     >
@@ -15,7 +15,7 @@ function FormInput({label, placeholder, size, name, isDisabled, isRequired}: For
         placeholder={placeholder}
         name={name}
         disabled={isDisabled}
-        className={`${styles['input__field']} ${styles[`input__field--${size}`]}`}
+        className={`${styles['input']} ${styles[`input--${size}`]}`}
       />
     </TextField>
   )
