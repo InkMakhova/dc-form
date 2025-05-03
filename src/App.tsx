@@ -1,7 +1,7 @@
 import { JSX } from 'react'
-import MainForm from './components/main-form/MainForm.tsx';
-import UIComponents from './components/ui-components/UIComponents.tsx';
-import styles from "./components/ui-components/UIComponents.module.css";
+import componentStyles from './components/ui-components/UIComponents.module.css'
+import MainForm from './components/main-form/MainForm.tsx'
+import UIComponents from './components/ui-components/UIComponents.tsx'
 
 function App(): JSX.Element {
   return (
@@ -15,7 +15,7 @@ function App(): JSX.Element {
       </section>
 
       {/* UI Components Section */}
-      <section className={styles['ui-components']}>
+      <section className={componentStyles['container']}>
         <h2>Variations of components</h2>
         <UIComponents/>
       </section>

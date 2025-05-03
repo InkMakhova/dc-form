@@ -16,7 +16,7 @@ function UIComponents(): JSX.Element {
       {/* Buttons */}
       <section>
         <h3>Button</h3>
-        <div className={styles['ui-component__container']}>
+        <div className={styles['component']}>
           {/* Small Primary Contained */}
           <FormButton
             type="button"
@@ -266,7 +266,7 @@ function UIComponents(): JSX.Element {
       {/* Input */}
       <section>
         <h3>Input</h3>
-        <div className={styles['ui-component__container']}>
+        <div className={styles['component']}>
           {/* Form Input Medium */}
           <FormInput
             name="medium-input"
@@ -288,7 +288,7 @@ function UIComponents(): JSX.Element {
       {/* Number input */}
       <section>
         <h3>Number Input</h3>
-        <div className={styles['ui-component__container']}>
+        <div className={styles['component']}>
           <FormNumberInput
             name="number-input"
             label="Label"
@@ -298,13 +298,23 @@ function UIComponents(): JSX.Element {
             step={1}
             defaultValue={0}
           />
+          <FormNumberInput
+            name="number-input"
+            label="Label"
+            placeholder="Input"
+            min={0}
+            max={10}
+            step={1}
+            defaultValue={0}
+            isDisabled
+          />
         </div>
       </section>
 
       {/* Slider */}
       <section>
         <h3>Slider</h3>
-        <div className={`${styles['ui-component__container']} ${styles['ui-component__slider']}`}>
+        <div className={`${styles['component']} ${styles['slider']}`}>
           <FormSlider
             ariaLabel='Slider'
             min={0}
