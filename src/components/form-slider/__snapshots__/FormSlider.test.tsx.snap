@@ -18,17 +18,17 @@ exports[`matches snapshot 1`] = `
       Opacity
     </label>
     <div
-      class="_slider__track_f7dc6d"
+      class="_track_f7dc6d"
       data-orientation="horizontal"
       data-rac=""
       style="position: relative;"
     >
       <div
-        class="_slider__progress_f7dc6d"
+        class="_progress_f7dc6d"
         style="width: 30%;"
       />
       <div
-        class="_slider__thumb_f7dc6d"
+        class="_thumb_f7dc6d"
         data-rac=""
         style="position: absolute; left: 30%; transform: translate(-50%, -50%);"
       >

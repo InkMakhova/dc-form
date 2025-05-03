@@ -3,42 +3,41 @@
 exports[`matches snapshot 1`] = `
 <div>
   <div
-    class="_input__container_7e3432"
+    class="_container_7e3432"
     data-rac=""
   >
     <label
       class="react-aria-Label"
-      for="react-aria-«r1s»"
-      id="react-aria-«r1u»"
+      for="react-aria-«r14»"
+      id="react-aria-«r16»"
     >
       Size
     </label>
     <div
-      class="_input-number__group-container_9885f5"
+      class="_container_9885f5"
       data-rac=""
       role="group"
     >
       <button
-        aria-controls="react-aria-«r1s»"
+        aria-controls="react-aria-«r14»"
         aria-label="Decrease size"
-        aria-labelledby="react-aria-«r23» react-aria-«r1u»"
+        aria-labelledby="react-aria-«r1b» react-aria-«r16»"
         class="
         _button_4e4ded
         _button--small_4e4ded
         _button--secondary-contained_4e4ded
         _button--icon-only_4e4ded
-        _button--decrement_4e4ded
       "
         data-rac=""
         data-testid="form-button"
-        id="react-aria-«r23»"
+        id="react-aria-«r1b»"
         slot="decrement"
         tabindex="-1"
         type="button"
       >
         <span
           class="
-            _button__icon_4e4ded 
+            _icon_4e4ded 
             
           "
         >
@@ -57,22 +56,16 @@ exports[`matches snapshot 1`] = `
         </span>
       </button>
       <input
-        aria-labelledby="react-aria-«r1u»"
-        aria-readonly="true"
+        aria-labelledby="react-aria-«r16»"
         aria-roledescription="Number field"
         autocomplete="off"
         autocorrect="off"
-        class="
-            _input__field_7e3432 
-            _input__field--small_7e3432
-            _input-number_9885f5
-          "
+        class="_input_7e3432 _input--small_7e3432"
         data-rac=""
-        id="react-aria-«r1s»"
+        id="react-aria-«r14»"
         inputmode="numeric"
         name="size"
         placeholder="Size"
-        readonly=""
         spellcheck="false"
         tabindex="0"
         title=""
@@ -80,28 +73,27 @@ exports[`matches snapshot 1`] = `
         value="10"
       />
       <button
-        aria-controls="react-aria-«r1s»"
+        aria-controls="react-aria-«r14»"
         aria-label="Increase size"
-        aria-labelledby="react-aria-«r22» react-aria-«r1u»"
+        aria-labelledby="react-aria-«r1a» react-aria-«r16»"
         class="
         _button_4e4ded
         _button--small_4e4ded
         _button--secondary-contained_4e4ded
         _button--icon-only_4e4ded
-        _button--increment_4e4ded
       "
         data-disabled="true"
         data-rac=""
         data-testid="form-button"
         disabled=""
-        id="react-aria-«r22»"
+        id="react-aria-«r1a»"
         slot="increment"
         tabindex="-1"
         type="button"
       >
         <span
           class="
-            _button__icon_4e4ded 
+            _icon_4e4ded 
             
           "
         >

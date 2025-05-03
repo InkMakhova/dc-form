@@ -1,10 +1,8 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import { expect, vitest} from 'vitest'
+import { render, screen } from '@testing-library/react';
+import { expect } from 'vitest'
 import FormNumberInput from './FormNumberInput.tsx';
 
 test('renders input with label', () => {
-  const handleIncrement = vitest.fn()
-  const handleDecrement = vitest.fn()
   render(
     <FormNumberInput
       name='size'
@@ -13,56 +11,12 @@ test('renders input with label', () => {
       min={1}
       max={10}
       step={1}
-      onDecrement={handleDecrement}
-      onIncrement={handleIncrement}
     />
   )
   expect(screen.getByText('Size')).toBeInTheDocument()
 })
 
-test('calls onIncrement when increment button is clicked', () => {
-  const handleIncrement = vitest.fn()
-  const handleDecrement = vitest.fn()
-  render(
-    <FormNumberInput
-      name='size'
-      label='Size'
-      value={5}
-      min={1}
-      max={10}
-      step={1}
-      onIncrement={handleIncrement}
-      onDecrement={handleDecrement}
-    />
-  )
-  const incrementButton = screen.getByLabelText('Increase size')
-  fireEvent.click(incrementButton)
-  expect(handleIncrement).toHaveBeenCalled()
-})
-
-test('calls onDecrement when decrement button is clicked', () => {
-  const handleDecrement = vitest.fn()
-  const handleIncrement = vitest.fn()
-  render(
-    <FormNumberInput
-      name='size'
-      label='Size'
-      value={5}
-      min={1}
-      max={10}
-      step={1}
-      onIncrement={handleIncrement}
-      onDecrement={handleDecrement}
-    />
-  )
-  const decrementButton = screen.getByLabelText('Decrease size')
-  fireEvent.click(decrementButton)
-  expect(handleDecrement).toHaveBeenCalled()
-})
-
 test('decrement button is disabled at min value', () => {
-  const handleDecrement = vitest.fn()
-  const handleIncrement = vitest.fn()
   render(
     <FormNumberInput
       name='size'
@@ -71,8 +25,6 @@ test('decrement button is disabled at min value', () => {
       min={1}
       max={10}
       step={1}
-      onIncrement={handleIncrement}
-      onDecrement={handleDecrement}
     />
   )
   const decrementButton = screen.getByLabelText('Decrease size')
@@ -80,8 +32,6 @@ test('decrement button is disabled at min value', () => {
 })
 
 test('increment button is disabled at max value', () => {
-  const handleDecrement = vitest.fn()
-  const handleIncrement = vitest.fn()
   render(
     <FormNumberInput
       name='size'
@@ -90,8 +40,6 @@ test('increment button is disabled at max value', () => {
       min={1}
       max={10}
       step={1}
-      onIncrement={handleIncrement}
-      onDecrement={handleDecrement}
     />
   )
   const incrementButton = screen.getByLabelText('Increase size')
@@ -99,8 +47,6 @@ test('increment button is disabled at max value', () => {
 })
 
 test('matches snapshot', () => {
-  const handleDecrement = vitest.fn()
-  const handleIncrement = vitest.fn()
   const { container } = render(
     <FormNumberInput
       name='size'
@@ -110,8 +56,6 @@ test('matches snapshot', () => {
       min={1}
       max={10}
       step={1}
-      onIncrement={handleIncrement}
-      onDecrement={handleDecrement}
     />
   )
   expect(container).toMatchSnapshot();

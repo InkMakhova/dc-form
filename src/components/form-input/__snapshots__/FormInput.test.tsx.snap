@@ -3,21 +3,21 @@
 exports[`matches snapshot 1`] = `
 <div>
   <div
-    class="_input__container_7e3432"
+    class="_container_7e3432"
     data-rac=""
   >
     <label
       class="react-aria-Label"
-      for="react-aria-«rp»"
-      id="react-aria-«rq»"
+      for="react-aria-«ru»"
+      id="react-aria-«rv»"
     >
       Label
     </label>
     <input
-      aria-labelledby="react-aria-«rq»"
-      class="_input__field_7e3432 _input__field--medium_7e3432"
+      aria-labelledby="react-aria-«rv»"
+      class="_input_7e3432 _input--medium_7e3432"
       data-rac=""
-      id="react-aria-«rp»"
+      id="react-aria-«ru»"
       name="snapshot"
       placeholder="Text"
       tabindex="0"

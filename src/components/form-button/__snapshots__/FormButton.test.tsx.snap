@@ -9,7 +9,6 @@ exports[`matches snapshot 1`] = `
         _button--medium_4e4ded
         _button--primary-contained_4e4ded
         
-        
       "
     data-disabled="true"
     data-rac=""

@@ -60,7 +60,7 @@ test('progress bar width matches value percentage', () => {
       onChange={() => {}}
     />
   )
-  const progress = document.querySelector(`.${styles['slider__progress']}`) as HTMLDivElement;
+  const progress = document.querySelector(`.${styles['progress']}`) as HTMLDivElement;
   expect(progress?.style.width).toBe('75%');
 })
 

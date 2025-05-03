@@ -28,7 +28,20 @@ test('renders with label', () => {
   expect(screen.getByLabelText("Label")).toBeInTheDocument();
 });
 
-test('applies correct classes for size', () => {
+test('applies correct classes for small size', () => {
+  render(
+    <FormInput
+      name="small-input"
+      label="Label"
+      placeholder="enter text"
+      size={InputSize.Small}
+    />
+  )
+  const input = screen.getByLabelText('Label');
+  expect(input.className).toMatch(/input--small/);
+});
+
+test('applies correct classes for medium size', () => {
   render(
     <FormInput
       name="medium-input"
@@ -38,7 +51,7 @@ test('applies correct classes for size', () => {
     />
   )
   const input = screen.getByLabelText('Label');
-  expect(input.className).toMatch(/input__field--medium/);
+  expect(input.className).toMatch(/input--medium/);
 });
 
 test('displays correct placeholder', () => {
