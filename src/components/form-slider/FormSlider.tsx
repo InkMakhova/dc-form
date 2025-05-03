@@ -15,12 +15,12 @@ function FormSlider({label, ariaLabel, min, max, value, step, onChange}: FormSli
       step={step}
     >
       { label && <Label>{label}</Label> }
-      <SliderTrack className={styles['slider__track']}>
+      <SliderTrack className={styles['track']}>
         <div
-          className={styles['slider__progress']}
+          className={styles['progress']}
           style={{ width: ((value - min) / (max - min)) * 100 + '%' }}
         />
-        <SliderThumb className={styles['slider__thumb']}/>
+        <SliderThumb className={styles['thumb']}/>
       </SliderTrack>
     </Slider>
   )
