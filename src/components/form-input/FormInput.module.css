@@ -48,6 +48,10 @@
     color: var(--color-grey-500);
 }
 
+.input:disabled::placeholder {
+    color: var(--color-grey-500);
+}
+
 .input--small {
     padding: 2px;
     height: 24px;
