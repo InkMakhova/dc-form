@@ -28,23 +28,21 @@ function RangeInputSlider(props: RangeInputSliderTypesProps): JSX.Element {
 
   // Render
   return (
-    <div className={styles['range-input-slider']}>
+    <div className={styles['container']}>
       {/* Input control */}
-      <div className={styles['range-input-slider__input']}>
-        <FormNumberInput
-          name={inputName}
-          label={inputLabel}
-          min={min}
-          max={max}
-          step={step}
-          value={state}
-          onIncrement={increment}
-          onDecrement={decrement}
-        />
-      </div>
+      <FormNumberInput
+        name={inputName}
+        label={inputLabel}
+        min={min}
+        max={max}
+        step={step}
+        value={state}
+        onIncrement={increment}
+        onDecrement={decrement}
+      />
 
       {/* Slider */}
-      <div className={styles['range-input-slider__slider']}>
+      <div className={styles['slider']}>
         <FormSlider
           ariaLabel={sliderAriaLabel}
           min={min}
