@@ -14,11 +14,7 @@
     border-radius: 8px;
 }
 
-.form-results {
-    color: var(--color-common-black);
-}
-
-.form-inputs__container {
+.form-inputs {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,8 +22,12 @@
     gap: 24px;
 }
 
-.form-buttons__container {
+.form-actions {
     width: 100%;
     display: flex;
     gap: 8px;
+}
+
+.form-results {
+    color: var(--color-common-black);
 }

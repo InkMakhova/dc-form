@@ -51,7 +51,7 @@ function MainForm() {
   // Render
   return (
     <Form action={submitAction} onReset={reset} className={styles['form']}>
-      <div className={styles['form-inputs__container']}>
+      <div className={styles['form-inputs']}>
         {/* Name */}
         <FormInput
           label="Name"
@@ -74,12 +74,12 @@ function MainForm() {
       </div>
 
       {/* Form Buttons*/}
-      <div className={styles['form-buttons__container']}>
+      <div className={styles['form-actions']}>
         {/* Reset */}
         <FormButton
           type="reset"
           variant={ButtonVariant.PrimaryOutlined}
-          icon={<DeleteIcon className={`${buttonStyles['button__icon']} ${buttonStyles['button__icon--delete']}`}/>}
+          icon={<DeleteIcon className={`${buttonStyles['button__icon--delete']}`}/>}
           size={ButtonSize.Medium}
           ariaLabel="Clear"
           text="Clear"
@@ -97,7 +97,7 @@ function MainForm() {
       </div>
 
       { (results || state.error) &&
-        <div className={styles['formResults__container']}>
+        <div className={styles['form-results']}>
           { results &&
             <>
               <p><strong>Submitted name:</strong> {results.name}</p>
