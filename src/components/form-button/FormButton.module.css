@@ -40,12 +40,10 @@
 
 .button--icon-only.button--small {
     padding: 4px;
-    width: 24px;
 }
 
 .button--icon-only.button--medium {
     padding: 8px;
-    width: 32px;
 }
 
 .button--primary-contained {
