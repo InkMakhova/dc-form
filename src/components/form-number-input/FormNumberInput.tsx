@@ -19,9 +19,9 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
     max,
     step,
     value,
+    defaultValue,
     isDisabled,
-    onIncrement,
-    onDecrement
+    onChange
   } = props;
 
   return (
@@ -30,8 +30,9 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
       maxValue={max}
       step={step}
       value={value}
+      defaultValue={defaultValue}
       className={inputStyles['container']}
-      isReadOnly
+      onChange={onChange}
     >
       <Label>{label}</Label>
       <Group className={styles['container']}>
@@ -44,7 +45,6 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
           ariaLabel="Decrease size"
           slot="decrement"
           isDisabled={isDisabled || Number(value) <= min}
-          onPress={onDecrement}
         />
         {/* Number Input */}
         <Input
@@ -62,7 +62,6 @@ function FormNumberInput(props: FormNumberInputProps): JSX.Element {
           ariaLabel="Increase size"
           slot="increment"
           isDisabled={isDisabled || Number(value) >= max}
-          onPress={onIncrement}
         />
       </Group>
     </NumberField>

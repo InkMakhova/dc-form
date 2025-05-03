@@ -19,8 +19,6 @@ function RangeInputSlider(props: RangeInputSliderTypesProps): JSX.Element {
   const [state, setState] = useState(defaultValue);
 
   // Handlers
-  const increment = () => { setState(prevState => prevState + step) }
-  const decrement = () => { setState(prevState => prevState - step) }
   const handleChange = (value: number) => { setState(value) }
 
   // Update state
@@ -37,8 +35,7 @@ function RangeInputSlider(props: RangeInputSliderTypesProps): JSX.Element {
         max={max}
         step={step}
         value={state}
-        onIncrement={increment}
-        onDecrement={decrement}
+        onChange={handleChange}
       />
 
       {/* Slider */}

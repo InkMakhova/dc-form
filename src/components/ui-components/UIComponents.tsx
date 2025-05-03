@@ -9,7 +9,6 @@ import FormInput from '../form-input/FormInput.tsx'
 import FormNumberInput from '../form-number-input/FormNumberInput.tsx'
 
 function UIComponents(): JSX.Element {
-  const [inputValue, setInputValue] = useState<number>(0);
   const [sliderValue, setSliderValue] = useState<number>(0);
 
   return (
@@ -297,9 +296,7 @@ function UIComponents(): JSX.Element {
             min={0}
             max={10}
             step={1}
-            value={inputValue}
-            onDecrement={(): void => { setInputValue(prevState => prevState - 1) }}
-            onIncrement={(): void => { setInputValue(prevState => prevState + 1) }}
+            defaultValue={0}
           />
         </div>
       </section>

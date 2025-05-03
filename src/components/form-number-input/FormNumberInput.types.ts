@@ -4,9 +4,9 @@ export type FormNumberInputProps = {
   placeholder?: string;
   min: number,
   max: number;
-  value: number,
+  value?: number,
+  defaultValue?: number,
   isDisabled?: boolean;
   step: number;
-  onDecrement: () => void
-  onIncrement: () => void;
+  onChange?: (value: number) => void
 };
