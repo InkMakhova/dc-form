@@ -74,8 +74,6 @@ function UIComponents(): JSX.Element {
             type="button"
             variant={ButtonVariant.PrimaryContained}
             size={ButtonSize.Medium}
-            icon={<AddIcon/>}
-            iconPosition={IconPosition.Right}
             ariaLabel="Add something button"
             text="Button"
             onPress={() => console.log("Click!")}
@@ -91,7 +89,7 @@ function UIComponents(): JSX.Element {
             text="Button"
             onPress={() => console.log("Click!")}
           />
-          {/* Medium Primary Contained Icon Right*/}
+          {/* Medium Primary Contained Icon Right */}
           <FormButton
             type="button"
             variant={ButtonVariant.PrimaryContained}
@@ -129,8 +127,6 @@ function UIComponents(): JSX.Element {
             type="button"
             variant={ButtonVariant.PrimaryOutlined}
             size={ButtonSize.Medium}
-            icon={<AddIcon/>}
-            iconPosition={IconPosition.Right}
             ariaLabel="Add something button"
             text="Button"
             onPress={() => console.log("Click!")}
@@ -146,7 +142,7 @@ function UIComponents(): JSX.Element {
             text="Button"
             onPress={() => console.log("Click!")}
           />
-          {/* Medium Primary Outlined Icon Right*/}
+          {/* Medium Primary Outlined Icon Right */}
           <FormButton
             type="button"
             variant={ButtonVariant.PrimaryOutlined}
@@ -175,8 +171,6 @@ function UIComponents(): JSX.Element {
             type="button"
             variant={ButtonVariant.SecondaryContained}
             size={ButtonSize.Medium}
-            icon={<AddIcon/>}
-            iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
             onPress={() => console.log("Click!")}
@@ -215,13 +209,12 @@ function UIComponents(): JSX.Element {
             isDisabled
             onPress={() => console.log("Click!")}
           />
+
           {/* Medium Secondary Outlined */}
           <FormButton
             type="button"
             variant={ButtonVariant.SecondaryOutlined}
             size={ButtonSize.Medium}
-            icon={<AddIcon/>}
-            iconPosition={IconPosition.Right}
             text="Button"
             ariaLabel="Add something button"
             onPress={() => console.log("Click!")}
