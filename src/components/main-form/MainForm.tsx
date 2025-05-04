@@ -1,7 +1,6 @@
 import { useActionState, useState } from 'react'
 import { Form } from 'react-aria-components'
 import DeleteIcon from '../../assets/delete.svg?react'
-import buttonStyles from '../form-button/FormButton.module.css'
 import styles from './MainForm.module.css'
 import { InputSize } from '../form-input/FormInput.types.ts'
 import { ButtonSize, ButtonVariant } from '../form-button/FormButton.types.ts'
@@ -79,7 +78,7 @@ function MainForm() {
         <FormButton
           type="reset"
           variant={ButtonVariant.PrimaryOutlined}
-          icon={<DeleteIcon className={`${buttonStyles['button__icon--delete']}`}/>}
+          icon={<DeleteIcon />}
           size={ButtonSize.Medium}
           ariaLabel="Clear"
           text="Clear"
