@@ -42,14 +42,13 @@ exports[`matches snapshot 1`] = `
           "
         >
           <svg
-            fill="none"
-            height="2"
-            viewBox="0 0 14 2"
-            width="14"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M0 1.99921V-0.000671387H13.9992V1.99921H0Z"
+              d="M3.33334 8.66668V7.33334H12.6667V8.66668H3.33334Z"
               fill="#1A1A1A"
             />
           </svg>
@@ -98,16 +97,14 @@ exports[`matches snapshot 1`] = `
           "
         >
           <svg
-            fill="none"
-            height="14"
-            viewBox="0 0 14 14"
-            width="14"
+            height="16"
+            viewBox="0 0 16 16"
+            width="16"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M7.49988 0.499695V6.49969H13.4989V7.49969H7.49988V13.4987H6.49988V7.49969H0.499878V6.49969H6.49988V0.499695H7.49988Z"
+              d="M7.33331 12.6667V8.66668H3.33331V7.33334H7.33331V3.33334H8.66665V7.33334H12.6666V8.66668H8.66665V12.6667H7.33331Z"
               fill="#1A1A1A"
-              stroke="black"
             />
           </svg>
         </span>
